@@ -6,14 +6,13 @@ $(function() {
         droppedCount = 0,
         isDragging = false,
         hoveringOnContentsContainer = false;
-
+    
     img.draggable({
         revert: 'invalid'
     });
 
     folder.droppable({
         accept: '#main img',
-        
         drop: function(event, ui) {
             // Move the dragged icon to .folder-contents
             ui.draggable.appendTo(contents_container)
